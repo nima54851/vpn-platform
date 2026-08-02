@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+    environment:
+      - DB_PATH=/data/vpn.db
+
+  frontend:
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm run build"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    restart: always
+    ports:
+      - "3000:3000"
