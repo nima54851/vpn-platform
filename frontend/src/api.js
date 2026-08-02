@@ -1,4 +1,6 @@
 // API 配置
+// 本地开发: http://localhost:8000
+// Vercel 部署后: 替换为你的 Vercel 域名，如 https://vpn-platform-api.vercel.app
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 const TOKEN = () => localStorage.getItem('vpn_token')
