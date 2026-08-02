@@ -1,5 +1,5 @@
 // API 配置
-const API_BASE = import.meta.env.VITE_API_URL || 'https://api-zeta-neon-27.vercel.app'
+const API_BASE = import.meta.env.VITE_API_URL || 'https://api-hw2cfjf7g-nima54851s-projects.vercel.app'
 
 const TOKEN = () => localStorage.getItem('vpn_token')
 const AUTH = () => TOKEN() ? { Authorization: `Bearer ${TOKEN()}` } : {}
