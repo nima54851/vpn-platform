@@ -1,0 +1,15 @@
+{
+  "name": "vpn-platform",
+  "version": 2,
+  "build": {
+    "builder": "python",
+    "pythonVersion": "python3.11"
+  },
+  "run": {
+    "command": "uvicorn main:app --host 0.0.0.0 --port $PORT",
+    "port": 8000
+  },
+  "env": {
+    "DB_PATH": { "required": false }
+  }
+}
